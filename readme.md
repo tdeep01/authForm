@@ -1,5 +1,6 @@
 to run this application.
 run the following commands
+    
     > sudo docker-compose up
     > sudo docker cp ./users.sql mysql:/
     > sudo docker exec -it mysql sh
