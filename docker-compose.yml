@@ -1,0 +1,24 @@
+version: '3'
+services:
+  backend:
+    container_name: backend
+    build:
+      dockerfile: backend/dev.Dockerfile
+      context: .
+    ports:
+      - "8081:8081"
+    links:
+      - mysql
+    volumes:
+      - ./backend:/var/app/
+  mysql:
+    image: mysql:5.7.26
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_USER: docker_user
+      MYSQL_PASSWORD: root
+    ports:
+      - 8082:3306
+    volumes:
+      - ./.dbdata:/var/lib/mysql

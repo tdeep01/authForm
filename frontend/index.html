@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./index.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <img class="leftImg" src="./public/leftpanel.jpg">
+        </div>
+        <div class="right">
+            <div class="signInBtnOuterDiv">
+                <div class="signInBtn">SIGN IN</div>
+            </div>
+            <div id="alert_danger" class="alert_danger hidden">something went wrong<sup onclick="hideAlert()" class="alert_cross">X</sup></div>
+            <div id="alert_success" class="alert_success hidden">data saved in DB<sup onclick="hideAlert()" class="alert_cross">X</sup></div>
+            <div class="mT10  headingTxt">
+                <h1>Explore & Experience</h1>
+                <p>Get onto your most confortable journey yet. All the way up</p>
+            </div>
+            <form class="rightForm" onsubmit="handleSubmit(event);">
+                <div class="inputBoxOuterDiv mT4">
+                    <div class="nameInputBox mR3">
+                        <input class="commonInput1" id="firstName" placeholder="firstName" type="text">
+                        <span id="firstNameErr" class="danger hidden">error</span>
+                    </div>
+                    <div class="nameInputBox">
+                        <input class="commonInput1" id="lastName" placeholder="lastName" type="text">
+                        <span id="lastNameErr" class="danger hidden">error</span>
+                    </div>
+                </div>
+                <div class="mT4">
+                    <div>
+                        <input id="email" class="commonInput2" placeholder="Email" type="text">
+                    </div>
+                    <span id="emailErr" class="danger hidden">error</span>
+                </div>
+                <div class="mT4">
+                    <div>
+                        <input id="userName" class="commonInput2" placeholder="User Name" type="text">
+                    </div>
+                    <span id="userNameErr" class="danger hidden">error</span>
+                </div>
+                <div class="mT4">
+                    <div>
+                        <input id="password" class="commonInput2" placeholder="Password" type="text">
+                    </div>
+                    <span id="passwordErr" class="danger hidden">error</span>
+                </div>
+                <div class="mT4">
+                    <div>
+                        <input id="cnfPassword" class="commonInput2" placeholder="Confirm Password" type="text">
+                    </div>
+                    <span id="cnfPasswordErr" class="danger hidden">error</span>
+                </div>
+                <div class="mT4 submitBtnDiv">
+                    <button class="submitBtn" type="submit" >GET STARTED</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
